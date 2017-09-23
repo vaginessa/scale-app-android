@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:textColor="@color/white"
+            android:background="@null"
+            android:id="@+id/activity_home_btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="@string/start" />
+
+        <Button
+            android:textColor="@color/white"
+            android:id="@+id/activity_home_btnEnd"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="@string/end" />
+
+    </LinearLayout>
+
+    <TextView
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:text="@string/app_name"
+        android:id="@+id/activity_home_tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:fontFamily="sans-serif-thin"
+        android:textColor="@color/white"
+        android:textSize="100sp"
+        android:id="@+id/activity_home_tvValue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:gravity="center"
+        android:layout_below="@+id/activity_home_tvName" />
+
+</RelativeLayout>
