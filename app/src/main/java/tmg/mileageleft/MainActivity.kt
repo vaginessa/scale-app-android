@@ -43,8 +43,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, SettingsDialog.D
         val start: Date = sdf.parse(Prefs.getStartDate(applicationContext))
         val end: Date = sdf.parse(Prefs.getEndDate(applicationContext))
         val now: Date = Date()
-        val days: Long = ((now.time - start.time) * value) / (end.time - start.time)
-        activity_home_tvValue.text = days.toString()
+        if (end.time - start.time == 0L) {
+            activity_home_tvValue.text = "9"
+        }
+        else {
+            val days: Long = ((now.time - start.time) * value) / (end.time - start.time)
+            activity_home_tvValue.text = days.toString()
+        }
     }
 
 }
